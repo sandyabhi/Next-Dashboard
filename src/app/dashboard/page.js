@@ -7,18 +7,15 @@ import React from "react";
 
 const Dashboard = () => {
   return (
-    <div className="flex-1 flex flex-row">
-      <div className="w-1/4 h-screen bg-blue-500 rounded-[15px]">
-        <Sidebar />
-      </div>
-      <div w-full h-screen pt>
-        <Navbar />
+    <div className="container flex flex-row p-0 m-0">
+      <Sidebar />
+
+      <div className="w-full h-full flex-grow">
+        {/* <Navbar /> */}
         {/* <div className="bg-sky-100 p-24"> */}
         <Main />
         {/* </div> */}
       </div>
-
-      <div></div>
     </div>
   );
 };
