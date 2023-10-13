@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import {
   AiOutlinePlus,
   AiOutlineInstagram,
@@ -9,9 +8,9 @@ import {
   AiOutlineMail,
 } from "react-icons/ai";
 
-const AddProfile = ({ visible, setVisible, setUser, user }) => {
+const NewProfile = ({ visible, setVisible, setUser, user }) => {
   return (
-    <div className="lg:w-[400px] md:w-[350px] sm:w-full h-[250px] container bg-white shadow-md rounded-md flex flex-col justify-center items-center">
+    <div className="lg:w-[450px] md:w-[420px] sm:w-full h-[250px] container bg-white shadow-md rounded-md flex flex-col justify-center items-center">
       {!user.name && !user.email && !user.phone ? (
         <div className="p-5 flex flex-col cursor-pointer justify-center items-center">
           <AiOutlinePlus
@@ -56,4 +55,4 @@ const AddProfile = ({ visible, setVisible, setUser, user }) => {
   );
 };
 
-export default AddProfile;
+export default NewProfile;

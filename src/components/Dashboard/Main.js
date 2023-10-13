@@ -3,13 +3,12 @@
 import React, { useState } from "react";
 import Card from "./Card";
 import Activity from "./Activity";
-// import PieChart from "./PieChartProduct";
-import PieChartProduct from "./PieChartProduct";
-import AddProfile from "./AddProfile";
 import AddUserModal from "../Modal/AddUserModal";
 import { AiOutlineWallet, AiOutlineLike } from "react-icons/ai";
 import { FiUsers } from "react-icons/fi";
 import { BsTags } from "react-icons/bs";
+import TopProducts from "./TopProducts";
+import NewProfile from "./NewProfile";
 
 const Main = () => {
   const [visible, setVisible] = useState(false);
@@ -24,7 +23,7 @@ const Main = () => {
   return (
     <div className="bg-slate-100 rounded-lg shadow-sm pt-5 px-4 w-full pb-8">
       {/* Cards */}
-      <div className="flex gap-4 flex-wrap md:justify-center md:items-center lg:justify-start">
+      <div className="flex gap-4 flex-wrap justify-center items-center">
         <Card
           title="Revenues"
           value="$2,129,430"
@@ -59,15 +58,15 @@ const Main = () => {
         />
       </div>
 
-      {/* Activities */}
+      {/* Charts */}
       <div className="pt-8 h-full">
         <div className="">
           <Activity />
         </div>
-        <div className="pt-8 flex flex-wrap w-full gap-4">
-          <PieChartProduct />
+        <div className="pt-8 flex flex-wrap justify-center w-full gap-5">
+          <TopProducts />
 
-          <AddProfile
+          <NewProfile
             visible={visible}
             setVisible={setVisible}
             setUser={setUser}
@@ -81,7 +80,6 @@ const Main = () => {
               user={user}
             />
           )}
-          {/* <AddProfile /> */}
         </div>
       </div>
     </div>

@@ -3,13 +3,7 @@
 const Card = ({ title, value, percent, icon }) => {
   return (
     <div className="w-60 h-full text-black bg-white rounded-2xl shadow-md p-3">
-      <div className="flex flex-col">
-        {icon}
-        {/* <icon
-        // className="bg-green-400 p-1 w-8 h-8 rounded-full text-white"
-        // size={24}
-        /> */}
-      </div>
+      <div className="flex flex-col">{icon}</div>
       <div className="pt-1">
         <div className="text-xs">Total {title}</div>
         <div className="flex flex-row justify-between pt-1">

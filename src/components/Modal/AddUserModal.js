@@ -5,12 +5,10 @@ import { AiOutlineClose, AiOutlineCloseCircle } from "react-icons/ai";
 const AddUserModal = ({ setVisible, setUser, user }) => {
   const [step, setStep] = useState(0);
 
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("--==-=");
-    // Submit the form data to your backend server or store it in your database
-    console.log(user);
 
+    // console.log(user);
     setVisible(false);
   };
   return (
@@ -127,9 +125,6 @@ const AddUserModal = ({ setVisible, setUser, user }) => {
             </button>
             <button
               disabled={step === 0 ? true : false}
-              // onClick={() => {
-              //   setVisible(true);
-              // }}
               type="submit"
               className={`py-2 px-3 text-white rounded-md bg-blue-500 right-0
               ${step === 0 ? `hidden` : ``}

@@ -3,24 +3,38 @@
 import React, { useEffect, useState } from "react";
 import { Pie, Legend, PieChart } from "recharts";
 
-const PieChartProduct = () => {
+const TopProducts = () => {
   const [products, setProducts] = useState([]);
 
   const fetchData = async () => {
-    const res = await fetch("https://dummyjson.com/products");
-    const data = await res.json();
-
-    setProducts(data.products);
+    try {
+      const res = await fetch("https://dummyjson.com/products");
+      const data = await res.json();
+      console.log(data.products.slice(0, 3));
+      setProducts(data.products.slice(0, 3));
+    } catch (error) {
+      console.log(error);
+    }
   };
+
   useEffect(() => {
     fetchData();
   }, []);
 
-  const data = [
-    { name: "Basic Tees", value: 400, fill: "#0088FE" },
-    { name: "Short Pants", value: 300, fill: "#00C49F" },
-    { name: "Hoodies", value: 200, fill: "#FFBB28" },
-  ];
+  function generateRandomColor() {
+    const hexDigits = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += hexDigits[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  const data = products.map((prod, i) => {
+    return { name: prod.title, value: prod.stock, fill: generateRandomColor() };
+  });
+
+  console.log(data);
 
   const renderColorfulLegendText = (value, entry) => {
     return (
@@ -37,13 +51,13 @@ const PieChartProduct = () => {
   };
 
   return (
-    <div className="overflow-hidden lg:overflow-hidden md:overflow-hidden sm:overflow-x-auto pb-4 lg:w-[400px] md:w-[350px] sm:w-full h-[250px] rounded-md bg-white shadow-md">
+    <div className="overflow-x-auto overflow-y-hidden lg:overflow-hidden md:overflow-hidden sm:overflow-x-auto pb-4 lg:w-[450px] md:w-[430px] sm:w-full h-[250px] rounded-md bg-white shadow-md">
       <div className="py-4 px-4 flex justify-between items-center text-black">
         <p className="font-bold">Top Products</p>
         <p className="text-xs text-gray-400">May-June 2021</p>
       </div>
       <div>
-        <PieChart width={550} height={200}>
+        <PieChart width={450} height={200}>
           <Pie
             data={data}
             cx={100}
@@ -59,6 +73,7 @@ const PieChartProduct = () => {
             iconType="circle"
             layout="vertical"
             verticalAlign="middle"
+            align="right"
             iconSize={10}
             padding={1}
             formatter={renderColorfulLegendText}
@@ -69,4 +84,4 @@ const PieChartProduct = () => {
   );
 };
 
-export default PieChartProduct;
+export default TopProducts;
