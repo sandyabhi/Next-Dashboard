@@ -2,20 +2,13 @@ import Main from "@/components/Charts/Main";
 import Navbar from "@/components/NavBar/Navbar";
 import Profile from "@/components/Profile";
 import Sidebar from "@/components/SideBar/Sidebar";
+import SignIn from "./(auth)/sign-in/sign-in";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen w-full h-full flex-row p-4 bg-blue-100">
-      <Sidebar />
-      <div className="pl-4 w-[100%] h-screen rounded-lg overflow-y-auto">
-        <div className="flex flex-row w-full">
-          <Navbar />
-          {/* <div className="flex flex-row bg-orange-200 w-full"></div> */}
-        </div>
-        {/* <div className="bg-pink-500 w-full h-full">dawd</div> */}
-        <Main />
-      </div>
-    </div>
+    <main>
+      <SignIn />
+    </main>
     // <main className="bg-gray-200 flex min-h-screen w-full h-full flex-row items-center justify-between">
     //   <div className="bg-gray-500 w-1/4 flex h-screen justify-center items-center">
     //     <Profile />

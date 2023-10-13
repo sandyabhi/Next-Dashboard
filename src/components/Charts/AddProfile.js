@@ -11,9 +11,9 @@ import {
 
 const AddProfile = ({ visible, setVisible, setUser, user }) => {
   return (
-    <div className="lg:w-[350px] md:w-full h-[200px] container bg-white shadow-md rounded-md flex flex-col justify-center items-center">
+    <div className="lg:w-[400px] md:w-[350px] sm:w-full h-[250px] container bg-white shadow-md rounded-md flex flex-col justify-center items-center">
       {!user.name && !user.email && !user.phone ? (
-        <div className="p-5 flex flex-col justify-center items-center">
+        <div className="p-5 flex flex-col cursor-pointer justify-center items-center">
           <AiOutlinePlus
             onClick={() => {
               setVisible(true);
@@ -24,8 +24,8 @@ const AddProfile = ({ visible, setVisible, setUser, user }) => {
           <span className="text-black text-sm pt-3">Add Profile</span>
         </div>
       ) : (
-        <div className="p-5 flex flex-col justify-center  text-black">
-          <div className="font-bold text-xl pb-5">{user.name}</div>
+        <div className="px-8 flex flex-col justify-center  text-black">
+          <div className="font-bold text-2xl pb-5">{user.name}</div>
           <div className="pt-6 text-xs underline flex flex-wrap gap-6 justify-between">
             <p className="flex flex-row justify-center items-center gap-2">
               <AiOutlineWhatsApp className="text-green-500 bg-zinc-200 rounded-full" />

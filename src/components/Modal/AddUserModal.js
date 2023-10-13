@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Input from "../Input";
+import { AiOutlineClose, AiOutlineCloseCircle } from "react-icons/ai";
 
 const AddUserModal = ({ setVisible, setUser, user }) => {
   const [step, setStep] = useState(0);
@@ -14,13 +15,14 @@ const AddUserModal = ({ setVisible, setUser, user }) => {
   };
   return (
     <div className="bg-opacity-60 fixed top-0 left-0 right-0 mx-auto flex justify-center items-center z-50 w-screen h-screen bg-black">
-      <div className="bg-white bg-opacity-100 relative shadow-md rounded-md w-2/4 text-black p-4">
+      <div className="bg-sky-50 bg-opacity-100 relative shadow-md rounded-md w-96 text-black p-4">
         {/* Header */}
         <div className="pb-4 flex justify-between">
           <p>Add New Profile</p>
-          <p onClick={() => setVisible(false)} className="hover:bg-slate-400">
-            X
-          </p>
+          <AiOutlineClose
+            className="text-gray-500"
+            onClick={() => setVisible(false)}
+          />
         </div>
 
         {/* Tabs */}

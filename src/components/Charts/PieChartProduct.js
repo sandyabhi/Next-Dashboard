@@ -37,19 +37,19 @@ const PieChartProduct = () => {
   };
 
   return (
-    <div className="pb-4 lg:w-[350px] md:w-full h-[200px] rounded-md bg-white shadow-md">
+    <div className="overflow-hidden lg:overflow-hidden md:overflow-hidden sm:overflow-x-auto pb-4 lg:w-[400px] md:w-[350px] sm:w-full h-[250px] rounded-md bg-white shadow-md">
       <div className="py-4 px-4 flex justify-between items-center text-black">
         <p className="font-bold">Top Products</p>
         <p className="text-xs text-gray-400">May-June 2021</p>
       </div>
       <div>
-        <PieChart width={500} height={150}>
+        <PieChart width={550} height={200}>
           <Pie
             data={data}
             cx={100}
-            cy={60}
-            innerRadius={50}
-            outerRadius={65}
+            cy={80}
+            innerRadius={60}
+            outerRadius={75}
             fill="#8884d8"
             paddingAngle={0}
             dataKey="value"

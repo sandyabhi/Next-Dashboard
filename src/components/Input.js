@@ -18,13 +18,13 @@ const Input = ({
   };
 
   return (
-    <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-1 w-80">
       <label className="flex flex-row">
         {title} {secondary && <p className="text-gray-500">(Optional)</p>}
       </label>
 
       <input
-        className="white p-1 pl-2 w-[350px] rounded-md"
+        className="white p-1 pl-2 w-full rounded-md"
         type={type}
         placeholder={placeholder}
         onChange={handleInputChange}
