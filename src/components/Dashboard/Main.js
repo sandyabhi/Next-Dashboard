@@ -23,7 +23,7 @@ const Main = () => {
   return (
     <div className="bg-slate-100 rounded-lg shadow-sm pt-5 px-4 w-full pb-8">
       {/* Cards */}
-      <div className="flex gap-4 flex-wrap justify-center items-center">
+      <div className="flex gap-4 flex-wrap justify-center lg:justify-between md:justify-center sm:justify-center items-center">
         <Card
           title="Revenues"
           value="$2,129,430"
@@ -63,7 +63,7 @@ const Main = () => {
         <div className="">
           <Activity />
         </div>
-        <div className="pt-8 flex flex-wrap justify-center w-full gap-5">
+        <div className="pt-8 flex flex-wrap justify-between w-full gap-5">
           <TopProducts />
 
           <NewProfile
