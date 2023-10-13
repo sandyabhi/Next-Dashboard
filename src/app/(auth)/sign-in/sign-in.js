@@ -20,7 +20,7 @@ const SignIn = () => {
         <div className="flex flex-col justify-evenly items-center h-full">
           <div className="relative text-3xl font-bold">Board.</div>
           <div className="absolute bottom-0 gap-4 pb-4 hidden sm:hidden md:hidden lg:flex">
-            <a href="https://github.com/sandyabhi">
+            <a href="https://github.com/sandyabhi/Next-Dashboard">
               <AiFillGithub size={24} />
             </a>
             <a href="https://leetcode.com/abhisandy47/">
@@ -103,7 +103,7 @@ const SignIn = () => {
           </div>
         </div>
         <div className="absolute bottom-0 pb-4 text-blue-600 flex lg:hidden md:flex sm:flex sm:flex-row gap-4 justify-center items-center">
-          <a href="https://github.com/sandyabhi">
+          <a href="https://github.com/sandyabhi/Next-Dashboard">
             <AiFillGithub size={24} />
           </a>
           <a href="https://leetcode.com/abhisandy47/">
