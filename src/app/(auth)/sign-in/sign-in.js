@@ -87,7 +87,7 @@ const SignIn = () => {
             </button>
 
             <div className="text-xs flex justify-center pt-4">
-              <p>Don't have an account? </p>
+              <p>Don&apos;t have an account? </p>
 
               <p className="text-blue-500"> Register here</p>
             </div>
