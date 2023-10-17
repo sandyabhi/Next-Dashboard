@@ -15,10 +15,10 @@ const SignIn = () => {
   return (
     <div className="flex w-full h-full flex-row  bg-blue-100">
       <div className="lg:w-2/4 hidden md:hidden lg:flex  h-screen bg-blue-500  flex-col justify-between">
-        <p className="font-bold p-4">LOGO</p>
+        <p className="font-bold p-4">Home</p>
 
         <div className="flex flex-col justify-evenly items-center h-full">
-          <div className="relative text-3xl font-bold">Board.</div>
+          <div className="relative text-3xl font-bold">DASH.</div>
           <div className="absolute bottom-0 gap-4 pb-4 hidden sm:hidden md:hidden lg:flex">
             <a href="https://github.com/sandyabhi/Next-Dashboard">
               <AiFillGithub size={24} />
@@ -40,7 +40,7 @@ const SignIn = () => {
       <div className="lg:w-2/4 md:w-full sm:w-full w-full h-screen md:h-screen sm:h-screen bg-slate-200 text-black justify-center items-center flex">
         <div className="fixed top-4 flex sm:flex lg:hidden md:flex flex-col items-center justify-center">
           <p className="text-blue-600 font-bold">LOGO</p>
-          <p className="text-blue-600 text-3xl font-bold py-4">BOARD.</p>
+          <p className="text-blue-600 text-3xl font-bold py-4">DASH.</p>
         </div>
         <div className="shadow-md rounded-lg bg-sky-50 px-4 py-8">
           {/* Header */}
